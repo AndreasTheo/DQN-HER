@@ -29,7 +29,6 @@ total_evals = 300
 
 policy = GoalBased_DeepQNetwork(state_dim, goal_dim, action_dim)
 
-data_list = []
 for eval in range(total_evals):
         successes_per_eval = 0
         for e in range(episodes_per_eval):
@@ -57,6 +56,5 @@ for eval in range(total_evals):
             policy.replay_buffer.process_samples(True, True)
         print('eval:', eval)
         print('success rate: ', successes_per_eval / episodes_per_eval)
-        data_list.append(successes_per_eval / episodes_per_eval)
         policy.update(40)
 
