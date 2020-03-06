@@ -68,7 +68,7 @@ class GoalBased_DeepQNetwork(object):
         pass
 
     def update(self, update_rate):
-        # train q network and policy for n updates where n = update_rate
+        # train q network for n updates where n = update_rate
         for i in range(update_rate):
             # get transition data from replay buffer
             batch = self.replay_buffer.sample_batch(256)
