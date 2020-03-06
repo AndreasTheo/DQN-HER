@@ -10,7 +10,7 @@ z = 25
 #READ ME#
 
 #In the bitflipping environment the agent starts at a random state represented by an array
-#of zero or one bit variables e.g [0,1,0,1,1,1,1,0]. Note the array is of length z.
+#of zero or one bits e.g [0,1,0,1,1,1,1,0]. Note the array is of length z.
 #In the same starting state the agent is also given a random goal state e.g [1,1,1,1,1,1,1,1]
 #In each step in the environment the agent can flip one bit from zero to one or, one to zero.
 #The agents gets exactly z steps to go from the given starting state to the given goal state
