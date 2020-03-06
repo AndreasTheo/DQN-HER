@@ -67,9 +67,8 @@ class GoalBased_DeepQNetwork(object):
         self.q_network_optimizer.step()
         pass
 
-    def update(self, n):
-        # train q network for n updates
-        for i in range(n):
+    def update(self, update_rate):
+        for i in range(update_rate):
             # get transition data from replay buffer
             batch = self.replay_buffer.sample_batch(256)
             state = to_torch_var(np.array(batch[0]))
